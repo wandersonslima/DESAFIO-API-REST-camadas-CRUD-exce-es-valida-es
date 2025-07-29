@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "git")
+@Table(name = "tb_client")
 public class Client {
 
     @Id
