@@ -17,8 +17,8 @@ public class ClientService {
 
     @Transactional(readOnly = true)
     public ClientDTO findById(Long id) {
-        Client client = clientRepository.findById(id).orElseThrow(
-                () -> new IllegalArgumentException("Cliente não encontrado"));
+        Client client = clientRepository.findById(id).
+                orElseThrow(() -> new IllegalArgumentException("Cliente não encontrado: "));
         return new ClientDTO(client);
     }
 
